@@ -11,6 +11,7 @@ apt-get update
 list=(
     apt-transport-https
     curl
+    git
     shellcheck
     unzip
     # all else below for pwsh
