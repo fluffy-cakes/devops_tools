@@ -11,6 +11,7 @@ apt-get update
 list=(
     apt-transport-https
     curl
+    gawk
     git
     shellcheck
     unzip
