@@ -27,7 +27,7 @@ list=(
     zlib1g
     openssh-client
 )
-    
+
 for i in "${list[@]}"; do
     printf "\n\n***** Installing %s\n" "$i"
     DEBIAN_FRONTEND=noninteractive apt-get install --no-install-recommends -y "$i"
