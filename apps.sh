@@ -4,12 +4,13 @@ HCL_PACKER="1.7.0"
 HCL_TERRAFORM="0.14.7"
 HCL_TFDOCS="0.11.2"
 HCL_TOJSON="0.3.2"
-POWERSHELL="7.1.2"
+POWERSHELL="7.1.3"
 
 apt-get update
 
 list=(
     apt-transport-https
+    ca-certificates # also pwsh
     curl
     gawk
     git
@@ -18,7 +19,6 @@ list=(
     # all else below for pwsh
     less
     locales
-    ca-certificates
     gss-ntlmssp
     libicu66
     libssl1.1

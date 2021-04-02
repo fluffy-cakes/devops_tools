@@ -6,4 +6,4 @@ COPY ./apps.sh /tmp/apps.sh
 
 RUN ./tmp/apps.sh
 
-CMD ["pwsh"]
+CMD ["/bin/bash"]

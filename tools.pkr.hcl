@@ -2,7 +2,7 @@ source "docker" "ubuntu" {
     commit             = true
     image              = "ubuntu:20.04"
     changes            = [
-        "ENTRYPOINT pwsh"
+        "ENTRYPOINT /bin/bash"
     ]
 }
 

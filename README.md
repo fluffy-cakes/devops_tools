@@ -12,3 +12,13 @@ Docker image contains
 - git
 - shellcheck
 - unzip
+
+
+```bash
+docker run \
+    --name=devtools \
+    --restart unless-stopped \
+    -td \
+    -v /mnt/c/Users/asdf/asdf:/data \
+    elfreako/devtools
+```
