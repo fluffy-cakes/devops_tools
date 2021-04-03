@@ -80,3 +80,9 @@ memory=3GB   # Limits VM memory in WSL 2 up to 3GB
 processors=4 # Makes the WSL 2 VM use two virtual processors
 ```
 ...restart WSL
+
+### MacOS Terminal
+
+To enable auto load in MacOS Terminal, edit your Preferences and create/duplicate a Profile. Under the Shell menu of the profile, add `docker exec -it devtools /bin/zsh` inside the Run Command.
+
+![](./imgs/macos_terminal.png)
