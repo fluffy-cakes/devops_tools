@@ -44,7 +44,7 @@ Recommended usage when flipping between computers is using Settings Sync within 
 
 The Docker extension also allows you to attach the running container as a shell: https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker
 
-![](imgs/docker_extension.png)
+![](./imgs/docker_extension.png)
 
 ### WSL
 
@@ -61,7 +61,7 @@ Enabling container dropdown in Windows Terminal using WSL and Docker Desktop:
     }
 ```
 
-![](imgs/windows_terminal_embedded.png)
+![](./imgs/windows_terminal_embedded.png)
 
 Docker with WSL tends to eat up memory at times, to restrict it, perform the following...
 
