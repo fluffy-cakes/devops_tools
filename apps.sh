@@ -1,9 +1,9 @@
 #!/bin/bash
 
-HCL_PACKER="1.7.0"
-HCL_TERRAFORM="0.14.7"
-HCL_TFDOCS="0.11.2"
-HCL_TOJSON="0.3.2"
+HCL_PACKER="1.7.1"
+HCL_TERRAFORM="0.14.9"
+HCL_TFDOCS="0.12.1"
+HCL_TOJSON="0.3.3"
 POWERSHELL="7.1.3"
 
 apt-get update
@@ -14,8 +14,10 @@ list=(
     curl
     gawk
     git
+    nano
     shellcheck
     unzip
+    zsh
     # all else below for pwsh
     less
     locales
@@ -42,6 +44,11 @@ mkdir ./downloads && cd ./downloads || exit
 printf "\n\n***** Azure CLI\n"
 curl -sL https://aka.ms/InstallAzureCLIDeb | bash
 
+# Bicep via Azure CLI
+printf "\n\n***** Bicep\n"
+az bicep install
+cp /root/.azure/bin/bicep /bin/bicep
+
 # HCL Packer
 printf "\n\n***** HCL Packer\n"
 curl -L -o packer_${HCL_PACKER}_linux_amd64.zip https://releases.hashicorp.com/packer/${HCL_PACKER}/packer_${HCL_PACKER}_linux_amd64.zip
@@ -65,6 +72,16 @@ printf "\n\n***** HCL to JSON\n"
 curl -L -o hcl2json https://github.com/tmccombs/hcl2json/releases/download/v${HCL_TOJSON}/hcl2json_linux_amd64
 chmod +x ./hcl2json
 mv ./hcl2json /usr/local/bin/hcl2json
+
+# Oh My ZSH
+printf "\n\n***** Oh My ZSH\n"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+echo $'alias ll=\'ls -lah\'' >> /root/.zshrc
+
+# ls = List information about the FILEs
+# -a = All; do not ignore entries starting with .
+# -h = Human readable
+# -l = Use a long listing format
 
 # PowerShell
 # based on https://github.com/PowerShell/PowerShell-Docker/blob/master/release/preview/ubuntu20.04/docker/Dockerfile
@@ -107,7 +124,7 @@ pwsh \
     -Command " \
         \$ErrorActionPreference = 'Stop' ; \
         \$ProgressPreference = 'SilentlyContinue' ; \
-        Write-Host \"Installing Module Az\" ; \
+        Write-Host \"Installing Module Az (...takes a while)\" ; \
         Install-Module -Name Az -AllowClobber -Confirm:\$false -scope CurrentUser -Force ; \
         Write-Host \"Installing Module Pester 4.6.0\" ; \
         Install-Module -Name Pester -RequiredVersion \"4.6.0\" -AllowClobber -Confirm:\$false -scope CurrentUser -Force"
