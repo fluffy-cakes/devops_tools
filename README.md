@@ -85,4 +85,4 @@ processors=4 # Makes the WSL 2 VM use two virtual processors
 
 To enable auto load in MacOS Terminal, edit your Preferences and create/duplicate a Profile. Under the Shell menu of the profile, add `docker exec -it devtools /bin/zsh` inside the Run Command.
 
-![](./imgs/macos_terminal.png)
+![](./imgs/mac_terminal.png)
