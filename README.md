@@ -4,18 +4,19 @@ Misc repo for DevOps tooling
 https://hub.docker.com/u/elfreako
 
 Docker image contains
-- [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/what-is-azure-cli) (inc. Bicep 💪)
-- [HCL Packer](https://www.packer.io/downloads)
-- [HCL Terraform](https://www.terraform.io/downloads.html)
-- [HCL Terraform Docs](https://github.com/terraform-docs/terraform-docs)
-- [HCL to JSON](https://github.com/tmccombs/hcl2json)
-- [PowerShell](https://github.com/PowerShell/PowerShell) (Modules: Azure, Pester 4.6.0)
-- Curl
-- Git
-- Nano
-- [Oh My ZSH](https://github.com/ohmyzsh/ohmyzsh)
-- [Shellcheck](https://github.com/koalaman/shellcheck)
-- Unzip
+- [Azure CLI v2.21.0](https://docs.microsoft.com/en-us/cli/azure/what-is-azure-cli) (inc. Bicep v0.3.126 💪)
+- [HCL Packer v1.7.1](https://www.packer.io/downloads)
+- [HCL Terraform v0.14.9](https://www.terraform.io/downloads.html)
+- [HCL Terraform Docs v0.12.1](https://github.com/terraform-docs/terraform-docs)
+- [HCL to JSON v0.3.3](https://github.com/tmccombs/hcl2json)
+- [PowerShell v7.1.3](https://github.com/PowerShell/PowerShell) (Modules: Azure v5.7.0, Pester v4.6.0)
+- AWK v5.0.1
+- Curl v7.68.0
+- Git v2.25.1
+- Nano v4.8
+- [Oh My ZSH v5.8](https://github.com/ohmyzsh/ohmyzsh)
+- [Shellcheck v0.7.0](https://github.com/koalaman/shellcheck)
+- Unzip v6.00
 
 ### Running Container
 
