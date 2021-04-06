@@ -134,3 +134,17 @@ pwsh \
 
 cd ~ || exit
 rm -rf ~/downloads
+
+
+printf "\n\n***** Printing Versions"
+awk        --version | grep "GNU Awk" && \
+az         --version | grep "azure-cli" && \
+bicep      --version && \
+curl       --version | grep "curl" && \
+nano       --version | grep "version" && \
+packer     --version && \
+shellcheck --version | grep "version:" && \
+terraform  --version | grep "v" && \
+tfdocs     --version | grep "version" && \
+unzip             -v | grep UnZip | head -1 && \
+zsh        --version
