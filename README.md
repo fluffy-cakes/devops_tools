@@ -33,7 +33,7 @@ docker run \
     elfreako/devtools
 ```
 
-TIP: you can add your local SSH file to push/pull repos more easily by appending another volume:  `-v "${HOME}/.ssh":/root/.ssh \`
+TIP: you can add your local SSH file to push/pull repos more easily by appending another volume:  `--volume "${HOME}/.ssh":/root/.ssh \`
 
 Connect to container via ZSH:
 ```bash
