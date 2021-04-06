@@ -41,6 +41,9 @@ docker exec -it devtools /bin/zsh
 # -t = Allocate a pseudo-TTY
 ```
 
+Disabled Git refresh for performance gain: https://github.com/ohmyzsh/ohmyzsh/issues/3288
+`git config --global --add oh-my-zsh.hide-info 1`
+
 ### VSCode
 
 Recommended usage when flipping between computers is using Settings Sync within VSCode: https://code.visualstudio.com/docs/editor/settings-sync

@@ -83,6 +83,9 @@ echo $'alias ll=\'ls -lah\'' >> /root/.zshrc
 # -h = Human readable
 # -l = Use a long listing format
 
+# ZSH and large repos can take time to populate the git refresh, disabling for performance gain
+git config --global --add oh-my-zsh.hide-info 1
+
 # PowerShell
 # based on https://github.com/PowerShell/PowerShell-Docker/blob/master/release/preview/ubuntu20.04/docker/Dockerfile
 printf "\n\n***** PowerShell\n"
