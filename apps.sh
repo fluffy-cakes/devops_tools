@@ -146,5 +146,5 @@ packer     --version && \
 shellcheck --version | grep "version:" && \
 terraform  --version | grep "v" && \
 tfdocs     --version | grep "version" && \
-unzip             -v | grep UnZip | head -1 && \
+unzip             -v | grep "UnZip" | head -1 && \
 zsh        --version
