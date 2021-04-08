@@ -5,8 +5,8 @@ https://hub.docker.com/u/elfreako
 
 Docker image contains
 - [Azure CLI v2.21.0](https://docs.microsoft.com/en-us/cli/azure/what-is-azure-cli) (inc. Bicep v0.3.126 💪)
-- [HCL Packer v1.7.1](https://www.packer.io/downloads)
-- [HCL Terraform v0.14.9](https://www.terraform.io/downloads.html)
+- [HCL Packer v1.7.2](https://www.packer.io/downloads)
+- [HCL Terraform v0.14.10](https://www.terraform.io/downloads.html)
 - [HCL Terraform Docs v0.12.1](https://github.com/terraform-docs/terraform-docs)
 - [HCL to JSON v0.3.3](https://github.com/tmccombs/hcl2json)
 - [PowerShell v7.1.3](https://github.com/PowerShell/PowerShell) (Modules: Azure v5.7.0, Pester v4.6.0)
