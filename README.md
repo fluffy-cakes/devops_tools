@@ -24,12 +24,15 @@ Run the container in detached mode and always load on boot:
 
 ```bash
 docker run \
-    --name devtools \                           # Assign a name to the container
-    --detach \                                  # Run container in background and print container ID (or -d)
-    --restart unless-stopped \                  # Restart policy to apply when a container exits (default "no")
-    --tty \                                     # Allocate a pseudo-TTY (or -t)
-    --volume /mnt/c/Users/asdf/asdf:/data \     # Bind mount a volume (or -v)
-    --volume /mnt/c/Users/zxcv/qwer:/data \     # Bind mount a volume (or -v)
+    --name devtools \                               # Assign a name to the container
+    --detach \                                      # Run container in background and print container ID (or -d)
+    --restart unless-stopped \                      # Restart policy to apply when a container exits (default "no")
+    --tty \                                         # Allocate a pseudo-TTY (or -t)
+    --volume '/etc/localtime':/etc/localtime:ro \   # map your timezone
+    --volume '/etc/timezone':/etc/timezone:ro \     # map your timezone
+    --volume '/mnt/c/Users/asdf/asdf':/data \       # mount a volume (or -v)
+    --volume '/mnt/c/Users/zxcv/qwer':/data \       # mount a volume (or -v)
+    --volume "${HOME}/.ssh":/root/.ssh \            # map your SSH key for git pulls
     elfreako/devtools
 ```
 
