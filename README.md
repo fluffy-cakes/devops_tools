@@ -4,7 +4,7 @@ Misc repo for DevOps tooling
 https://hub.docker.com/u/elfreako
 
 Docker image contains
-- [Azure CLI v2.22.0](https://docs.microsoft.com/en-us/cli/azure/what-is-azure-cli) (inc. Bicep v0.3.255 💪)
+- [Azure CLI v2.22.1](https://docs.microsoft.com/en-us/cli/azure/what-is-azure-cli) (inc. Bicep v0.3.255 💪)
 - [HCL Packer v1.7.2](https://www.packer.io/downloads)
 - [HCL Terraform v0.14.10](https://www.terraform.io/downloads.html)
 - [HCL Terraform Docs v0.12.1](https://github.com/terraform-docs/terraform-docs)
