@@ -57,7 +57,7 @@ The Docker extension also allows you to attach the running container as a shell:
 
 ![](./imgs/docker_extension.png)
 
-v1.0.0: Added `/root/.vscode-server` folder to map volume locally to speed up extensions being installed/re-used. Add another volume mount:
+v1.0.0: Added `/root/.vscode-server` folder to map volume locally to speed up extensions being installed/re-used. Add another volume mount: https://code.visualstudio.com/docs/remote/containers-advanced#_avoiding-extension-reinstalls-on-container-rebuild
 
 ```bash
 -v "${HOME}/someFolder/.vscode-server":/root/.vscode-server
