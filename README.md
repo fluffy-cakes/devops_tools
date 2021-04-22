@@ -4,17 +4,17 @@ Misc repo for DevOps tooling
 https://hub.docker.com/u/elfreako
 
 Docker image contains
-- [Azure CLI v2.22.1](https://docs.microsoft.com/en-us/cli/azure/what-is-azure-cli) (inc. Bicep v0.3.255 💪)
-- [HCL Packer v1.7.2](https://www.packer.io/downloads)
-- [HCL Terraform v0.14.10](https://www.terraform.io/downloads.html)
-- [HCL Terraform Docs v0.12.1](https://github.com/terraform-docs/terraform-docs)
-- [HCL to JSON v0.3.3](https://github.com/tmccombs/hcl2json)
-- [PowerShell v7.1.3](https://github.com/PowerShell/PowerShell) (Modules: Azure v5.7.0, Pester v4.6.0)
 - AWK v5.0.1
+- [Azure CLI v2.22.1](https://docs.microsoft.com/en-us/cli/azure/what-is-azure-cli) (inc. Bicep v0.3.255 💪)
 - Curl v7.68.0
 - Git v2.25.1
+- [HCL Packer v1.7.2](https://www.packer.io/downloads)
+- [HCL Terraform Docs v0.12.1](https://github.com/terraform-docs/terraform-docs)
+- [HCL Terraform v0.14.10](https://www.terraform.io/downloads.html)
+- [HCL to JSON v0.3.3](https://github.com/tmccombs/hcl2json)
 - Nano v4.8
 - [Oh My ZSH v5.8](https://github.com/ohmyzsh/ohmyzsh)
+- [PowerShell v7.1.3](https://github.com/PowerShell/PowerShell) (Modules: Azure v5.7.0, Pester v4.6.0)
 - [Shellcheck v0.7.0](https://github.com/koalaman/shellcheck)
 - Unzip v6.00
 
@@ -56,6 +56,12 @@ Recommended usage when flipping between computers is using Settings Sync within 
 The Docker extension also allows you to attach the running container as a shell: https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker
 
 ![](./imgs/docker_extension.png)
+
+v1.0.0: Added `/root/.vscode-server` folder to map volume locally to speed up extensions being installed/re-used. Add another volume mount:
+
+```bash
+-v "${HOME}/someFolder/.vscode-server":/root/.vscode-server
+```
 
 ### WSL
 
