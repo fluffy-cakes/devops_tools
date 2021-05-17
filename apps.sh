@@ -3,8 +3,8 @@
 set -euo pipefail
 
 HCL_PACKER="1.7.2"
-HCL_TERRAFORM="0.15.0"
-HCL_TFDOCS="0.12.1"
+HCL_TERRAFORM="0.15.3"
+HCL_TFDOCS="0.13.0"
 HCL_TOJSON="0.3.3"
 POWERSHELL="7.1.3"
 
@@ -65,9 +65,10 @@ mv ./terraform /usr/local/bin/terraform
 
 # HCL TF Docs
 printf "\n\n***** HCL TF Docs\n"
-curl -L -o tfdocs "https://github.com/terraform-docs/terraform-docs/releases/download/v${HCL_TFDOCS}/terraform-docs-v${HCL_TFDOCS}-linux-amd64"
-chmod +x ./tfdocs
-mv ./tfdocs /usr/local/bin/tfdocs
+curl -L -o tfdocs.tar.gz "https://github.com/terraform-docs/terraform-docs/releases/download/v${HCL_TFDOCS}/terraform-docs-v${HCL_TFDOCS}-linux-amd64.tar.gz"
+tar -zxvf ./tfdocs.tar.gz
+chmod +x ./terraform-docs
+mv ./terraform-docs /usr/local/bin/tfdocs
 
 # HCL to JSON
 printf "\n\n***** HCL to JSON\n"
