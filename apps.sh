@@ -6,6 +6,7 @@ HCL_PACKER="1.7.2"
 HCL_TERRAFORM="0.15.4"
 HCL_TFDOCS="0.14.1"
 HCL_TOJSON="0.3.3"
+SHELLCHECK="0.7.2"
 POWERSHELL="7.1.3"
 
 apt-get update
@@ -17,7 +18,6 @@ list=(
     gawk
     git
     nano
-    shellcheck
     unzip
     zsh
     # all else below for pwsh
@@ -56,6 +56,12 @@ printf "\n\n***** HCL Packer\n"
 curl -L -o "packer_${HCL_PACKER}_linux_amd64.zip" "https://releases.hashicorp.com/packer/${HCL_PACKER}/packer_${HCL_PACKER}_linux_amd64.zip"
 unzip "./packer_${HCL_PACKER}_linux_amd64.zip"
 mv ./packer /usr/local/bin/packer
+
+# ShellCheck
+printf "\n\n***** HCL ShellCheck\n"
+curl -L -o "shellcheck_${SHELLCHECK}_linux.x86_64.tar.xz" "https://github.com/koalaman/shellcheck/releases/download/v${SHELLCHECK}/shellcheck-v${SHELLCHECK}.linux.x86_64.tar.xz"
+tar -xvf "shellcheck_${SHELLCHECK}_linux.x86_64.tar.xz"
+mv "./shellcheck-v${SHELLCHECK}/shellcheck" /usr/local/bin/shellcheck
 
 # HCL Terraform
 printf "\n\n***** HCL Terraform\n"
@@ -148,7 +154,7 @@ nano       --version | grep "version" && \
 printf "\n\n ** - packer\n" && \
 packer     --version && \
 printf "\n\n ** - shellcheck\n" && \
-shellcheck --version | grep "version:" && \
+shellcheck -V        | grep "version:" && \
 printf "\n\n ** - terraform\n" && \
 terraform  --version | grep "v" && \
 printf "\n\n ** - tfdocs\n" && \
