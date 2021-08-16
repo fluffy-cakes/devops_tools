@@ -2,12 +2,12 @@
 
 set -euo pipefail
 
-HCL_PACKER="1.7.2"
-HCL_TERRAFORM="0.15.4"
-HCL_TFDOCS="0.14.1"
+HCL_PACKER="1.7.4"
+HCL_TERRAFORM="1.0.4"
+HCL_TFDOCS="0.15.0"
 HCL_TOJSON="0.3.3"
 SHELLCHECK="0.7.2"
-POWERSHELL="7.1.3"
+POWERSHELL="7.1.4"
 
 apt-get update
 
@@ -153,6 +153,8 @@ printf "\n\n ** - nano\n" && \
 nano       --version | grep "version" && \
 printf "\n\n ** - packer\n" && \
 packer     --version && \
+printf "\n\n ** - pwsh\n" && \
+pwsh -c '$psversiontable' | grep "PSVersion" && \
 printf "\n\n ** - shellcheck\n" && \
 shellcheck -V        | grep "version:" && \
 printf "\n\n ** - terraform\n" && \

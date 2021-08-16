@@ -16,7 +16,7 @@ build {
     post-processors {
         post-processor "docker-tag" {
             repository = "elfreako/devtools"
-            tags       = ["1.3.1", "latest"]
+            tags       = ["1.4.0", "latest"]
         }
     }
 }
