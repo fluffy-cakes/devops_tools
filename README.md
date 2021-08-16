@@ -14,7 +14,7 @@ Docker image contains
 - [HCL to JSON v0.3.3](https://github.com/tmccombs/hcl2json)
 - Nano v4.8
 - [Oh My ZSH v5.8](https://github.com/ohmyzsh/ohmyzsh)
-- [PowerShell v7.1.4](https://github.com/PowerShell/PowerShell) (Modules: Azure v5.7.0, Pester v4.6.0)
+- [PowerShell v7.1.4](https://github.com/PowerShell/PowerShell) (Modules: Azure v6.3.0, Pester v4.6.0)
 - [Shellcheck v0.7.2](https://github.com/koalaman/shellcheck)
 - Unzip v6.00
 
