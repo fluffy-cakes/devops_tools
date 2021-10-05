@@ -2,8 +2,8 @@
 
 set -euo pipefail
 
-HCL_PACKER="1.7.4"
-HCL_TERRAFORM="1.0.4"
+HCL_PACKER="1.7.6"
+HCL_TERRAFORM="1.0.8"
 HCL_TFDOCS="0.15.0"
 HCL_TOJSON="0.3.3"
 SHELLCHECK="0.7.2"
@@ -19,6 +19,7 @@ list=(
     git
     nano
     unzip
+    xz-utils
     zsh
     # all else below for pwsh
     less
@@ -129,8 +130,8 @@ pwsh \
         Install-Module -Name Az -AllowClobber -Confirm:\$false -scope CurrentUser -Force ; \
         Write-Host \"Installing Module Az Subscription\" ; \
         Install-Module -Name Az.Subscription -AllowClobber -Confirm:\$false -scope CurrentUser -Force ; \
-        Write-Host \"Installing Module Pester v4.6.0\" ; \
-        Install-Module -Name Pester -RequiredVersion \"4.6.0\" -AllowClobber -Confirm:\$false -scope CurrentUser -Force"
+        Write-Host \"Installing Module Pester\" ; \
+        Install-Module -Name Pester -AllowClobber -Confirm:\$false -scope CurrentUser -Force"
 
 cd ~ || exit
 rm -rf ~/downloads

@@ -5,12 +5,12 @@ https://hub.docker.com/u/elfreako
 
 Docker image contains
 - AWK v5.0.1
-- [Azure CLI v2.27.1](https://docs.microsoft.com/en-us/cli/azure/what-is-azure-cli) (inc. Bicep v0.4.613 💪)
+- [Azure CLI v2.28.0](https://docs.microsoft.com/en-us/cli/azure/what-is-azure-cli) (inc. Bicep v0.4.613 💪)
 - Curl v7.68.0
 - Git v2.25.1
-- [HCL Packer v1.7.4](https://www.packer.io/downloads)
+- [HCL Packer v1.7.6](https://www.packer.io/downloads)
 - [HCL Terraform Docs v0.15.0](https://github.com/terraform-docs/terraform-docs)
-- [HCL Terraform v1.0.4](https://www.terraform.io/downloads.html)
+- [HCL Terraform v1.0.8](https://www.terraform.io/downloads.html)
 - [HCL to JSON v0.3.3](https://github.com/tmccombs/hcl2json)
 - Nano v4.8
 - [Oh My ZSH v5.8](https://github.com/ohmyzsh/ohmyzsh)
