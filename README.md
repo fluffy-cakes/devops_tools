@@ -12,6 +12,7 @@ Docker image contains
 - [HCL Terraform Docs v0.15.0](https://github.com/terraform-docs/terraform-docs)
 - [HCL Terraform v1.0.8](https://www.terraform.io/downloads.html)
 - [HCL to JSON v0.3.3](https://github.com/tmccombs/hcl2json)
+- [JQ v1.6](https://github.com/stedolan/jq)
 - Nano v4.8
 - [Oh My ZSH v5.8](https://github.com/ohmyzsh/ohmyzsh)
 - [PowerShell v7.1.4](https://github.com/PowerShell/PowerShell) (Modules: Azure v6.3.0, Pester v4.6.0)

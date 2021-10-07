@@ -17,6 +17,7 @@ list=(
     curl
     gawk
     git
+    jq
     nano
     unzip
     xz-utils
@@ -140,30 +141,47 @@ mkdir -p ~/.vscode-server/extensions
 mkdir -p ~/.vscode-server-insiders/extensions
 
 printf "\n\n***** Printing Versions\n\n"
+
 printf "\n\n ** - awk\n" && \
 awk        --version | grep "GNU Awk" && \
+
 printf "\n\n ** - az\n" && \
 az         --version | grep "azure-cli" && \
+
 printf "\n\n ** - bicep\n" && \
 bicep      --version && \
+
 printf "\n\n ** - curl\n" && \
 curl       --version | grep "curl" && \
+
 printf "\n\n ** - git\n" && \
 git        --version && \
+
+printf "\n\n ** - jq\n" && \
+jq         --version && \
+
 printf "\n\n ** - nano\n" && \
 nano       --version | grep "version" && \
+
 printf "\n\n ** - packer\n" && \
 packer     --version && \
+
 printf "\n\n ** - pwsh\n" && \
 pwsh -c '$psversiontable' | grep "PSVersion" && \
+
 printf "\n\n ** - shellcheck\n" && \
 shellcheck -V        | grep "version:" && \
+
 printf "\n\n ** - terraform\n" && \
 terraform  --version | grep "v" && \
+
 printf "\n\n ** - tfdocs\n" && \
 tfdocs     --version | grep "version" && \
+
 printf "\n\n ** - unzip\n" && \
 unzip             -v | grep "UnZip" | head -1 && \
+
 printf "\n\n ** - zsh\n" && \
 zsh        --version
+
 printf "\n\n"
