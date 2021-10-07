@@ -140,48 +140,32 @@ rm -rf ~/downloads
 mkdir -p ~/.vscode-server/extensions
 mkdir -p ~/.vscode-server-insiders/extensions
 
+
+verList=(
+    "awk            --version"
+    "2>/dev/null az --version"
+    "bicep          --version"
+    "curl           --version"
+    "git            --version"
+    "jq             --version"
+    "nano           --version"
+    "packer"
+    "pwsh           -c '\$psversiontable'"
+    "shellcheck     -V"
+    "terraform      --version"
+    "tfdocs         --version"
+    "unzip          -v"
+    "zsh            --version"
+)
+
 printf "\n\n***** Printing Versions\n\n"
 
-printf "\n\n ** - awk\n" && \
-awk        --version | grep "GNU Awk" && \
+for i in "${verList[@]}"; do
+    if [[ $i != "packer" ]]; then
+        eval "$i" | awk -f ./apps.awk
+    else
+        printf '-'
+        printf ' [Packer v%s](https://www.packer.io/downloads)\n' "$(packer --version)"
+    fi
+done
 
-printf "\n\n ** - az\n" && \
-az         --version | grep "azure-cli" && \
-
-printf "\n\n ** - bicep\n" && \
-bicep      --version && \
-
-printf "\n\n ** - curl\n" && \
-curl       --version | grep "curl" && \
-
-printf "\n\n ** - git\n" && \
-git        --version && \
-
-printf "\n\n ** - jq\n" && \
-jq         --version && \
-
-printf "\n\n ** - nano\n" && \
-nano       --version | grep "version" && \
-
-printf "\n\n ** - packer\n" && \
-packer     --version && \
-
-printf "\n\n ** - pwsh\n" && \
-pwsh -c '$psversiontable' | grep "PSVersion" && \
-
-printf "\n\n ** - shellcheck\n" && \
-shellcheck -V        | grep "version:" && \
-
-printf "\n\n ** - terraform\n" && \
-terraform  --version | grep "v" && \
-
-printf "\n\n ** - tfdocs\n" && \
-tfdocs     --version | grep "version" && \
-
-printf "\n\n ** - unzip\n" && \
-unzip             -v | grep "UnZip" | head -1 && \
-
-printf "\n\n ** - zsh\n" && \
-zsh        --version
-
-printf "\n\n"
