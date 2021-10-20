@@ -9,6 +9,11 @@ source "docker" "ubuntu" {
 build {
     sources            = ["source.docker.ubuntu"]
 
+    provisioner "file" {
+        source         = "./apps.awk"
+        destination    = "/tmp/apps.awk"
+    }
+
     provisioner "shell" {
         script         = "./apps.sh"
     }
@@ -16,7 +21,7 @@ build {
     post-processors {
         post-processor "docker-tag" {
             repository = "elfreako/devtools"
-            tags       = ["1.5.1", "latest"]
+            tags       = ["1.6.0", "latest"]
         }
     }
 }

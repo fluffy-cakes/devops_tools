@@ -3,11 +3,11 @@
 set -euo pipefail
 
 HCL_PACKER="1.7.6"
-HCL_TERRAFORM="1.0.8"
+HCL_TERRAFORM="1.0.9"
 HCL_TFDOCS="0.15.0"
 HCL_TOJSON="0.3.3"
 SHELLCHECK="0.7.2"
-POWERSHELL="7.1.4"
+POWERSHELL="7.1.5"
 
 apt-get update
 
@@ -162,7 +162,7 @@ printf "\n\n***** Printing Versions\n\n"
 
 for i in "${verList[@]}"; do
     if [[ $i != "packer" ]]; then
-        eval "$i" | awk -f ./apps.awk
+        eval "$i" | awk -f /tmp/apps.awk
     else
         printf '-'
         printf ' [Packer v%s](https://www.packer.io/downloads)\n' "$(packer --version)"
