@@ -2,12 +2,12 @@
 
 set -euo pipefail
 
-HCL_PACKER="1.7.6"
-HCL_TERRAFORM="1.0.9"
-HCL_TFDOCS="0.15.0"
+HCL_PACKER="1.7.8"
+HCL_TERRAFORM="1.1.3"
+HCL_TFDOCS="0.16.0"
 HCL_TOJSON="0.3.3"
-SHELLCHECK="0.7.2"
-POWERSHELL="7.1.5"
+SHELLCHECK="0.8.0"
+POWERSHELL="7.2.1"
 
 apt-get update
 
@@ -59,12 +59,6 @@ curl -L -o "packer_${HCL_PACKER}_linux_amd64.zip" "https://releases.hashicorp.co
 unzip "./packer_${HCL_PACKER}_linux_amd64.zip"
 mv ./packer /usr/local/bin/packer
 
-# ShellCheck
-printf "\n\n***** HCL ShellCheck\n"
-curl -L -o "shellcheck_${SHELLCHECK}_linux.x86_64.tar.xz" "https://github.com/koalaman/shellcheck/releases/download/v${SHELLCHECK}/shellcheck-v${SHELLCHECK}.linux.x86_64.tar.xz"
-tar -xvf "shellcheck_${SHELLCHECK}_linux.x86_64.tar.xz"
-mv "./shellcheck-v${SHELLCHECK}/shellcheck" /usr/local/bin/shellcheck
-
 # HCL Terraform
 printf "\n\n***** HCL Terraform\n"
 curl -L -o "terraform_${HCL_TERRAFORM}_linux_amd64.zip" "https://releases.hashicorp.com/terraform/${HCL_TERRAFORM}/terraform_${HCL_TERRAFORM}_linux_amd64.zip"
@@ -96,6 +90,12 @@ echo $'alias ll=\'ls -lah\'' >> /root/.zshrc
 
 # ZSH and large repos can take time to populate the git refresh, disabling for performance gain
 git config --global --add oh-my-zsh.hide-info 1
+
+# ShellCheck
+printf "\n\n***** ShellCheck\n"
+curl -L -o "shellcheck_${SHELLCHECK}_linux.x86_64.tar.xz" "https://github.com/koalaman/shellcheck/releases/download/v${SHELLCHECK}/shellcheck-v${SHELLCHECK}.linux.x86_64.tar.xz"
+tar -xvf "shellcheck_${SHELLCHECK}_linux.x86_64.tar.xz"
+mv "./shellcheck-v${SHELLCHECK}/shellcheck" /usr/local/bin/shellcheck
 
 # PowerShell
 # based on https://github.com/PowerShell/PowerShell-Docker/blob/master/release/preview/ubuntu20.04/docker/Dockerfile

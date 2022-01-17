@@ -5,17 +5,17 @@ https://hub.docker.com/u/elfreako
 
 Docker image contains
 - AWK v5.0.1
-- [Azure CLI v2.29.0](https://docs.microsoft.com/en-us/cli/azure/what-is-azure-cli)
-- Bicep v0.4.1008
+- [Azure CLI v2.32.0](https://docs.microsoft.com/en-us/cli/azure/what-is-azure-cli)
+- Bicep v0.4.1124
 - Curl v7.68.0
 - Git v2.25.1
 - [JQ v1.6](https://github.com/stedolan/jq)
 - Nano v4.8
-- [Packer v1.7.6](https://www.packer.io/downloads)
-- [PowerShell v7.1.5](https://github.com/PowerShell/PowerShell)
-- [Shellcheck v0.7.2](https://github.com/koalaman/shellcheck)
-- [Terraform v1.0.9](https://www.terraform.io/downloads.html)
-- [Terraform Docs v0.15.0](https://github.com/terraform-docs/terraform-docs)
+- [Packer v1.7.8](https://www.packer.io/downloads)
+- [PowerShell v7.2.1](https://github.com/PowerShell/PowerShell)
+- [Shellcheck v0.8.0](https://github.com/koalaman/shellcheck)
+- [Terraform v1.1.3](https://www.terraform.io/downloads.html)
+- [Terraform Docs v0.16.0](https://github.com/terraform-docs/terraform-docs)
 - UnZip v6.00
 - Zsh v5.8
 
